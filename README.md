@@ -31,7 +31,7 @@ Most page content is data-driven:
 
 - Update profile, contact links, resume path, and social links in `data/about.js`.
 - Update roles and work history in `data/experience.js`.
-- Update project cards, links, tags, and banner paths in `data/projects.js`.
+- Update project cards, links, tags, and banner paths in `data/projects.js` .
 
 ## Deployment
 
