@@ -140,7 +140,7 @@ export const content: Content = {
     email: 'harijoshi07x@gmail.com',
     github: 'https://github.com/harijoshi07',
     linkedin: 'https://linkedin.com/in/harijoshi07',
-    domain: 'harijoshi.com.np',
+    domain: 'harijoshi07.github.io/portfolio-site',
     twitter: 'https://x.com/sometimesIcode_',
   },
 }
