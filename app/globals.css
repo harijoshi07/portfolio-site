@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cream:   #FAF8F5;
+  --ink:     #0D0D0D;
+  --orange:  #FF4500;
+  --gray:    #6B6B6B;
+  --white:   #FFFFFF;
+
+  --font-display: 'Syne', sans-serif;
+  --font-body:    'Inter', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--cream);
+  cursor: none;
+}
+
+/* Hide default scrollbar — Lenis manages scroll */
+::-webkit-scrollbar { display: none; }
+html { scrollbar-width: none; }
+
+/* Orange accent utility */
+.accent { color: var(--orange); }
+.accent-bg { background: var(--orange); }
+.accent-border { border-color: var(--orange); }
+
+/* Mobile: disable custom cursor, stack grids */
+@media (max-width: 768px) {
+  body { cursor: auto; }
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
