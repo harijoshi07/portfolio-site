@@ -1,4 +1,13 @@
 // content.ts
+export const basePath = '/portfolio-site'
+
+export const prefixPath = (src: string) => {
+  if (!src) return src
+  if (src.startsWith('http') || src.startsWith('mailto:') || src.startsWith('data:')) return src
+  if (src.startsWith(basePath)) return src
+  return `${basePath}${src.startsWith('/') ? '' : '/'}${src}`
+}
+
 export interface Stat {
   value: number
   suffix: string
@@ -63,7 +72,7 @@ export const content: Content = {
   },
 
   about: {
-    photo: '/images/favicons.jpeg',
+    photo: prefixPath('/images/favicons.jpeg'),
     bio: "I'm a mobile engineer based in Kathmandu, Nepal. I specialize in building Android products and Kotlin Multiplatform (KMP) shared codebases. My experience centers on MapLibre SDK integration, navigation workflows, offline persistence, and clean Jetpack Compose UI architecture. I care about release polish, clean code architecture, and high performance in real user flows.",
     tags: ['Kotlin', 'KMP', 'Compose', 'MapLibre SDK', 'Room', 'Ktor', 'Stripe SDK', 'Coroutines', 'MVVM', 'Gradle'],
   },

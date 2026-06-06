@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import { gsap } from '@/lib/gsap'
-import { content } from '@/content'
+import { content, prefixPath } from '@/content'
 
 export default function ColdOpen() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -71,7 +71,7 @@ export default function ColdOpen() {
     >
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
-        style={{ backgroundImage: 'url("/images/grain.png")', backgroundRepeat: 'repeat' }}
+        style={{ backgroundImage: `url("${prefixPath('/images/grain.png')}")`, backgroundRepeat: 'repeat' }}
       />
 
       <div className="flex flex-col items-center gap-6 text-center px-6">

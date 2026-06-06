@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import { gsap } from '@/lib/gsap'
-import { content } from '@/content'
+import { content, prefixPath } from '@/content'
 import Image from 'next/image'
 
 const project = content.projects[2]
@@ -13,7 +13,7 @@ const SCREENS = [
   '/screenshots/quizzle/quiz_mode_screen.png',
   '/screenshots/quizzle/quiz_answer_screen.png',
   '/screenshots/quizzle/quiz_result_screen.png',
-]
+].map(prefixPath)
 
 const PLAY_STORE_REVIEWS = [
   { text: "Fun way to test my knowledge! The offline mode is clutch.", author: "Aarav S.", date: "8 Jan 2025" },
@@ -147,7 +147,7 @@ export default function ProjectQuizzle() {
                   <div className="bg-white border border-black/[0.06] rounded-xl px-2.5 py-1.5 flex flex-col items-center justify-center w-[72px] h-[72px] shadow-sm flex-shrink-0">
                     <div className="relative w-6 h-6">
                       <Image
-                        src="/images/store-icons/play_store.png"
+                        src={prefixPath('/images/store-icons/play_store.png')}
                         alt="Play Store Logo"
                         fill
                         unoptimized
@@ -323,7 +323,7 @@ export default function ProjectQuizzle() {
                   <div className="bg-white border border-black/[0.06] rounded-xl px-2.5 py-1.5 flex flex-col items-center justify-center w-[72px] h-[72px] shadow-sm flex-shrink-0">
                     <div className="relative w-6 h-6">
                       <Image
-                        src="/images/store-icons/app_store.png"
+                        src={prefixPath('/images/store-icons/app_store.png')}
                         alt="App Store Logo"
                         fill
                         unoptimized
