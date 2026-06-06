@@ -1,47 +1,68 @@
 # Hari Joshi Portfolio
 
-A static personal portfolio for Hari Krishna Joshi, focused on mobile engineering, Kotlin Multiplatform, Jetpack Compose, and Android project work.
+A premium, interactive, scroll-driven personal developer portfolio for **Hari Joshi**, built with modern web technologies: Next.js (App Router), Tailwind CSS, GSAP (ScrollTrigger), TypeScript, and Lenis (Smooth Scroll).
 
-## Structure
+---
 
-- `index.html` - Page structure and static sections.
-- `style.css` - Responsive layout, dark/light themes, and visual styling.
-- `script.js` - Theme handling, dynamic rendering, scroll interactions, mobile menu, and image preview behavior.
-- `data/` - Editable content for about, experience, and projects.
-- `assets/` - Resume, favicon, and local font files.
-- `assets/images/project-banners/` - Project preview images used on the portfolio.
+## 🛠️ Technology Stack
 
-## Local Preview
+- **Core**: Next.js 14, React 18, TypeScript, Tailwind CSS
+- **Motion & Interactions**: GSAP, GSAP ScrollTrigger, Lenis Smooth Scroll
+- **Deployment**: GitHub Actions + GitHub Pages static export (`output: 'export'`)
 
-Open `index.html` directly in a browser, or run a small static server from the project root:
+---
 
-```sh
-python3 -m http.server 8000
+## 📂 Project Structure
+
+- `app/` - Next.js layouts, globals CSS, and main page route.
+- `components/` - Interactive scroll-driven scene components (ColdOpen, Engineer, Project showcases, Timeline, Invitation, etc.) and global UI elements (Navbar, Custom Cursor).
+- `lib/` - GSAP setup and responsive utility hooks.
+- `public/` - Static assets including profile photos, store icons, and application mockups screenshots.
+- `content.ts` - Centralized data file containing Hari's profile, projects lists, reviews, experiences, and social handles.
+
+---
+
+## 💻 Local Development
+
+First, ensure you have Node.js (v20+) installed. Then, install the dependencies:
+
+```bash
+npm install
 ```
 
-Then visit:
+Start the local development server:
 
-```text
-http://localhost:8000
+```bash
+npm run dev
 ```
 
-## Editing Content
+Open [http://localhost:3000](http://localhost:3000) with your browser to preview the site.
 
-Most page content is data-driven:
+---
 
-- Update profile, contact links, resume path, and social links in `data/about.js`.
-- Update roles and work history in `data/experience.js`.
-- Update project cards, links, tags, and banner paths in `data/projects.js` .
+## 📝 Customizing Content
 
-## Deployment
+All text contents, project links, screenshots arrays, and timeline items are fully data-driven. Modify [content.ts](file:///Users/mac/code/front%20end/website/content.ts) to update:
+- Personal details (name, title, bio photo, socials).
+- Work experiences (role, company, description list, timeline).
+- App showcase details (title, store links, screenshots arrays, reviews, etc.).
 
-This site does not need a build step. Deploy the repository root as a static site to GitHub Pages, Netlify, Vercel, Cloudflare Pages, or any static host.
+---
 
-Make sure these files are included in the deployed output:
+## 🚀 Deployment
 
-- `index.html`
-- `style.css`
-- `script.js`
-- `data/`
-- `assets/`
-- `assets/images/project-banners/`
+The repository is configured with a custom GitHub Actions workflow (`pages.yml`). 
+
+Simply commit and push your changes to the `main` branch:
+
+```bash
+git add .
+git commit -m "Update portfolio content"
+git push origin main
+```
+
+The workflow will automatically:
+1. Checkout the repository.
+2. Install dependencies via `npm ci`.
+3. Compile the Next.js static build via `npm run build` (exporting page assets to `./out`).
+4. Upload and deploy the static build directly to your **github.io** site.
