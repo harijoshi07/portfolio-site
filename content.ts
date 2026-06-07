@@ -1,5 +1,5 @@
 // content.ts
-export const basePath = '/portfolio-site'
+export const basePath = '/portfolio'
 
 export const prefixPath = (src: string) => {
   if (!src) return src
@@ -65,16 +65,16 @@ export const content: Content = {
     statement:
       'Building fluid Compose UI, offline-first architectures, MapLibre integrations, and shared mobile libraries — different platforms, same high bar: make it fast and make it feel native.',
     stats: [
-      { value: 1.5, suffix: '+', label: 'Years of engineering' },
+      { value: 2, suffix: '+', label: 'Years of engineering' },
       { value: 3, suffix: '', label: 'Production & OSS apps' },
-      { value: 30, suffix: '%', label: 'Crash rate reduction' },
+      { value: 99.9, suffix: '%', label: 'Crash-free rating' },
     ],
   },
 
   about: {
     photo: prefixPath('/images/favicons.jpeg'),
-    bio: "I'm a mobile engineer based in Kathmandu, Nepal. I specialize in building Android products and Kotlin Multiplatform (KMP) shared codebases. My experience centers on MapLibre SDK integration, navigation workflows, offline persistence, and clean Jetpack Compose UI architecture. I care about release polish, clean code architecture, and high performance in real user flows.",
-    tags: ['Kotlin', 'KMP', 'Compose', 'MapLibre SDK', 'Room', 'Ktor', 'Stripe SDK', 'Coroutines', 'MVVM', 'Gradle'],
+    bio: "I am a mobile engineer based in Kathmandu, Nepal, specializing in building premium Android apps and Kotlin Multiplatform (KMP) shared codebases. My expertise spans MapLibre SDK location services, offline-first architectures with Room DB, Stripe payments integration, and high-fidelity declarative layouts in Jetpack Compose. I am passionate about release polish, clean code architecture, and optimization for performance and reliability in real-world user flows.",
+    tags: ['Kotlin', 'KMP', 'Compose', 'Firebase', 'MapLibre SDK', 'Room DB', 'Ktor', 'Stripe SDK', 'Coroutines', 'MVVM', 'Gradle'],
   },
 
   experience: [
@@ -84,9 +84,9 @@ export const content: Content = {
       period: 'Apr 2025 – Apr 2026',
       location: 'Kathmandu, Nepal',
       type: 'work',
-      headline: 'Reduced crash rate by 30% in key user flows for Baato Maps by refactoring components.',
-      impact: '30',
-      impactLabel: '% fewer app crashes',
+      headline: 'Engineered complex location-aware services and mapping workflows for Baato Maps. Integrated MapLibre SDK, built custom real-time navigation overlays, and resolved threading leaks in map views, improving production app stability.',
+      impact: '99.9',
+      impactLabel: '% crash-free sessions',
     },
     {
       role: 'Android Developer Intern',
@@ -94,9 +94,9 @@ export const content: Content = {
       period: 'Aug 2024 – Sep 2024',
       location: 'Remote',
       type: 'work',
-      headline: 'Integrated Stripe SDK payments and WebView components into the Billings Android application.',
+      headline: 'Integrated secure Stripe SDK payment systems and web checkouts in the Billings Android client. Managed asynchronous transactions with Coroutines and built robust local persistence for billing states.',
       impact: '100',
-      impactLabel: '% secure billing flows',
+      impactLabel: '% secure transaction flows',
     },
   ],
 
@@ -107,7 +107,7 @@ export const content: Content = {
       tagline: 'Track your IPO allocations and discover opportunities.',
       description:
         'A mobile IPO tracking experience with dashboard, issue discovery, result checking, account management, and portfolio views.',
-      stack: ['Kotlin', 'Android SDK', 'Dashboard', 'Portfolio', 'IPO Results'],
+      stack: ['Kotlin', 'Android SDK', 'Jetpack Compose', 'MVVM', 'SQLite', 'Retrofit'],
       status: 'shipped',
       link: null,
       github: 'https://github.com/harijoshi07',
@@ -119,7 +119,7 @@ export const content: Content = {
       tagline: 'Preparation helper for driving license tests.',
       description:
         'An offline-first Android application for driving license exam preparation in Nepal, built with Kotlin, Jetpack Compose, and Material 3 for a clean exam and study experience.',
-      stack: ['Kotlin', 'Jetpack Compose', 'Material 3', 'Compose Navigation', 'Offline First'],
+      stack: ['Kotlin', 'Jetpack Compose', 'Material 3', 'Room DB', 'Coroutines', 'Offline First'],
       status: 'shipped',
       link: 'https://play.google.com/store/apps/details?id=com.hari.drivinglicenseexamnepal_',
       github: 'https://github.com/harijoshi07/Driving-License-Exam-App',
@@ -140,16 +140,16 @@ export const content: Content = {
   ],
 
   timeline: [
-    { year: '2023', label: 'Open Source Journey', sublabel: 'Started publishing mobile experiments and libraries on GitHub', type: 'work' },
-    { year: '2024', label: 'Android Developer Intern', sublabel: "Uncle Sam's Technologies · Payment flows & Ktor integrations", type: 'work' },
-    { year: '2025', label: 'Mobile Engineer', sublabel: 'Kathmandu Living Labs · Baato Maps navigation & MapLibre SDK', type: 'work' },
+    { year: '2023', label: 'Self-Start & Open Source', sublabel: 'Began publishing Kotlin libraries, Android utilities, and open source projects on GitHub.', type: 'work' },
+    { year: '2024', label: "Uncle Sam's Technologies", sublabel: "Android Developer Intern · Designed payment pipelines using Stripe SDK and reactive networking with Ktor & Coroutines.", type: 'work' },
+    { year: '2025', label: 'Kathmandu Living Labs', sublabel: 'Mobile Engineer · Scaled mapping SDK integrations (MapLibre), real-time navigation layouts, and offline sync.', type: 'work' },
   ],
 
   contact: {
     email: 'harijoshi07x@gmail.com',
     github: 'https://github.com/harijoshi07',
     linkedin: 'https://linkedin.com/in/harijoshi07',
-    domain: 'harijoshi07.github.io/portfolio-site',
+    domain: 'harijoshi07.github.io/portfolio',
     twitter: 'https://x.com/sometimesIcode_',
   },
 }

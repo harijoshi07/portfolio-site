@@ -2,6 +2,8 @@
 
 A premium, interactive, scroll-driven personal developer portfolio for **Hari Joshi**, built with modern web technologies: Next.js (App Router), Tailwind CSS, GSAP (ScrollTrigger), TypeScript, and Lenis (Smooth Scroll).
 
+👉 **Are you an Android engineer?** Check out the [Android Developer Guide to this codebase](file:///Users/mac/code/front%20end/website/DEVELOPER_GUIDE.md) to quickly understand how the React, Tailwind, and GSAP code maps to Jetpack Compose and Android SDK!
+
 ---
 
 ## 🛠️ Technology Stack

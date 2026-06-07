@@ -4,12 +4,14 @@ import { useEffect, useRef } from 'react'
 import { gsap, ScrollTrigger, registerGSAP } from '@/lib/gsap'
 
 const WORDS = [
-  'Kotlin', 'KMP', 'Java', 'Android SDK', 'Jetpack Compose', 'Compose Multiplatform',
-  'Material 3', 'Coroutines', 'Flow', 'Room DB', 'Retrofit', 'Ktor', 'Stripe SDK',
-  'Firebase', 'MapLibre SDK', 'Baato Maps', 'Gradle', 'MVVM', 'Clean Architecture',
-  'Play Store', 'Google Play Console', 'iOS', 'Swift', 'UIKit', 'Location Tracking',
-  'GPS', 'GIS', 'Offline First', 'GitHub', 'JSON', 'REST API', 'Maps API', 'MVVM Pattern',
-  'Koin DI', 'SQLite', 'Hilt', 'Shared Logic', 'Mobile Craft', 'UI Polish', 'Performance'
+  'Kotlin', 'Kotlin Multiplatform', 'Jetpack Compose', 'Compose Multiplatform',
+  'Firebase', 'Cloud Firestore', 'Firebase Auth', 'Crashlytics', 'Coroutines',
+  'Kotlin Flow', 'Room DB', 'Ktor Client', 'Koin DI', 'Hilt', 'SQLDelight',
+  'MapLibre SDK', 'Stripe SDK', 'Android SDK', 'SwiftUI', 'Swift', 'Gradle',
+  'Material 3', 'Clean Architecture', 'MVVM', 'Offline First', 'Location Tracking',
+  'Real-time GPS', 'REST API', 'CocoaPods', 'GitHub Actions', 'CI/CD',
+  'Push Notifications', 'SQLite', 'FCM', 'Analytics', 'App Polish',
+  'Multi-threading', 'JSON', 'UI/UX Polish', 'Performance Tuning'
 ]
 
 interface WordParams {

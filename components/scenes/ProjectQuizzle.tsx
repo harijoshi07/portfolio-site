@@ -40,6 +40,7 @@ export default function ProjectQuizzle() {
   const screen4Ref = useRef<HTMLDivElement>(null)
   const screen5Ref = useRef<HTMLDivElement>(null)
   const ctaWrapperRef = useRef<HTMLDivElement>(null)
+  const infoWrapperRef = useRef<HTMLDivElement>(null)
   const arrowRef = useRef<SVGPathElement>(null)
 
   useEffect(() => {
@@ -66,6 +67,7 @@ export default function ProjectQuizzle() {
         gsap.set(screen4Ref.current, { y: '100%' })
         gsap.set(screen5Ref.current, { y: '100%' })
         gsap.set(ctaWrapperRef.current, { opacity: 0, scale: 0.9, y: 20 })
+        gsap.set(infoWrapperRef.current, { opacity: 0, scale: 0.9, y: 20 })
 
         if (arrowRef.current) {
           const pathLength = arrowRef.current.getTotalLength()
@@ -92,8 +94,8 @@ export default function ProjectQuizzle() {
         tl.to(bottomRowRef.current, { x: -24, ease: 'power3.inOut', duration: 0.15 }, 0.75)
         tl.to(screen5Ref.current, { y: '0%', ease: 'power3.inOut', duration: 0.15 }, 0.75)
 
-        // --- SHOW CTA (Scroll progress 0.9 to 1.0) ---
-        tl.to(ctaWrapperRef.current, {
+        // --- SHOW CTA & INFO (Scroll progress 0.9 to 1.0) ---
+        tl.to([ctaWrapperRef.current, infoWrapperRef.current], {
           opacity: 1,
           scale: 1,
           y: 0,
@@ -164,7 +166,41 @@ export default function ProjectQuizzle() {
       </div>
 
       {/* Main Content Area */}
-      <div className="relative flex flex-col md:flex-row items-center justify-center gap-10 my-6 md:my-0 z-10 w-full max-w-4xl px-6">
+      <div className="relative flex flex-col md:flex-row items-center justify-center gap-10 my-6 md:my-0 z-10 w-full max-w-5xl px-6">
+        
+        {/* Left Side: Chapter, Title, Tagline, Description, Tech stack tags, Status */}
+        <div
+          ref={infoWrapperRef}
+          className="opacity-100 md:opacity-0 flex flex-col items-center md:items-start text-center md:text-left md:absolute md:right-[calc(50%+160px)] md:top-1/2 md:-translate-y-1/2 w-full md:w-[320px] z-20 flex-shrink-0"
+        >
+          <span className="font-mono text-xs text-orange tracking-widest uppercase mb-1">
+            Chapter {project.chapter}
+          </span>
+          <h2 className="font-display font-bold text-4xl md:text-5xl text-ink leading-none mb-3">
+            {project.title}
+          </h2>
+          <p className="font-body text-sm font-semibold text-orange mb-4">
+            {project.tagline}
+          </p>
+          <p className="font-body text-sm text-gray/80 leading-relaxed mb-6">
+            {project.description}
+          </p>
+          
+          {/* Tech stack tags */}
+          <div className="flex flex-wrap gap-2 justify-center md:justify-start mb-6">
+            {project.stack.map(tech => (
+              <span key={tech} className="font-mono text-[10px] px-2.5 py-1 bg-ink text-cream rounded-full border border-ink/10">
+                {tech}
+              </span>
+            ))}
+          </div>
+
+          <div className="font-mono text-[10px] tracking-widest uppercase text-gray/50 flex items-center gap-1.5 mt-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-orange animate-pulse" />
+            {project.status}
+          </div>
+        </div>
+
         {/* Clean Floating Screen Mockup (No Bezel Border) */}
         <div className="relative flex justify-center items-center flex-shrink-0">
           <div className="relative w-[240px] md:w-[260px] h-[480px] md:h-[520px] rounded-[1.8rem] md:rounded-[2rem] overflow-hidden bg-neutral-950 shadow-[0_20px_50px_rgba(0,0,0,0.12)] border border-black/5">

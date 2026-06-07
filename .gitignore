@@ -1,2 +1,10 @@
+# Dependency directories
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# OS files
 .DS_Store
-node_modules
+Thumbs.db

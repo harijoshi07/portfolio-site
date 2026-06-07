@@ -2,13 +2,14 @@
 
 import { useEffect, useRef } from 'react'
 import { gsap } from '@/lib/gsap'
-import { content } from '@/content'
+import { content, prefixPath } from '@/content'
 
 const NAV_LINKS = [
-  { label: 'About',    href: '#engineer' },
-  { label: 'Work',     href: '#projects' },
-  { label: 'Timeline', href: '#timeline' },
-  { label: 'Contact',  href: '#contact' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Work',       href: '#projects' },
+  { label: 'Timeline',   href: '#timeline' },
+  { label: 'Resume',     href: '/Hari_Joshi_Resume.pdf', external: true },
+  { label: 'Contact',    href: '#contact' },
 ]
 
 export default function Navbar() {
@@ -32,10 +33,12 @@ export default function Navbar() {
       </span>
 
       <ul className="hidden md:flex gap-8">
-        {NAV_LINKS.map(({ label, href }) => (
+        {NAV_LINKS.map(({ label, href, external }) => (
           <li key={label}>
             <a
-              href={href}
+              href={external ? prefixPath(href) : href}
+              target={external ? '_blank' : undefined}
+              rel={external ? 'noopener noreferrer' : undefined}
               className="font-body text-sm text-gray hover:text-orange transition-colors duration-200"
             >
               {label}

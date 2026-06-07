@@ -27,7 +27,7 @@ export default function ColdOpen() {
         })
         tl.fromTo(nameRef.current, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' })
         if (ruleRef.current) {
-          const len = (ruleRef.current as unknown as SVGGeometryElement).getTotalLength?.() ?? 400
+          const len = (ruleRef.current as unknown as SVGGeometryElement).getTotalLength?.() ?? 600
           gsap.set(ruleRef.current, { strokeDasharray: len, strokeDashoffset: len })
           tl.to(ruleRef.current, { strokeDashoffset: 0, duration: 0.6, ease: 'power2.inOut' }, '-=0.3')
         }
@@ -49,7 +49,7 @@ export default function ColdOpen() {
         const tl = gsap.timeline({ delay: 0.3 })
         tl.fromTo(nameRef.current, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' })
         if (ruleRef.current) {
-          const len = (ruleRef.current as unknown as SVGGeometryElement).getTotalLength?.() ?? 400
+          const len = (ruleRef.current as unknown as SVGGeometryElement).getTotalLength?.() ?? 600
           gsap.set(ruleRef.current, { strokeDasharray: len, strokeDashoffset: len })
           tl.to(ruleRef.current, { strokeDashoffset: 0, duration: 0.5, ease: 'power2.inOut' }, '-=0.2')
         }
@@ -82,8 +82,8 @@ export default function ColdOpen() {
           {content.hero.name}
         </h1>
 
-        <svg width="400" height="2" className="w-full max-w-lg">
-          <line ref={ruleRef} x1="0" y1="1" x2="400" y2="1" stroke="var(--orange)" strokeWidth="1.5" />
+        <svg viewBox="0 0 600 2" className="w-full max-w-[620px]">
+          <line ref={ruleRef} x1="0" y1="1" x2="600" y2="1" stroke="var(--orange)" strokeWidth="1.5" />
         </svg>
 
         <p
