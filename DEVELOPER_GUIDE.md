@@ -133,7 +133,7 @@ For example, to link the "Let's talk" button or add a resume button in [componen
 
 ## ⚡ 5. Cheat Sheet of Shell Commands
 
-Run these in your terminal within the `/Users/mac/code/front end/website` folder:
+Run these in your terminal within the `/Users/mac/code/front end/website` directory:
 
 * **Start Dev Server**: `npm run dev` (Starts hot-reloading server at http://localhost:3000)
 * **Verify Static Export**: `npm run build` (Compiles TypeScript and bundles production assets locally)

@@ -17,7 +17,7 @@ A premium, interactive, scroll-driven personal developer portfolio for **Hari Jo
 ## 📂 Project Structure
 
 - `app/` - Next.js layouts, globals CSS, and main page route.
-- `components/` - Interactive scroll-driven scene components (ColdOpen, Engineer, Project showcases, Timeline, Invitation, etc.) and global UI elements (Navbar, Custom Cursor).
+- `components/` - Interactive scroll-driven scene components (ColdOpen, Engineer, Project showcases, Timeline, Invitation, etc.) and global UI elements (Navbar, Custom Cursor, etc.)
 - `lib/` - GSAP setup and responsive utility hooks.
 - `public/` - Static assets including profile photos, store icons, and application mockups screenshots.
 - `content.ts` - Centralized data file containing Hari's profile, projects lists, reviews, experiences, and social handles.
@@ -64,7 +64,7 @@ git push origin main
 ```
 
 The workflow will automatically:
-1. Checkout the repository.
-2. Install dependencies via `npm ci`.
+1. checkout the repository.
+2. install dependencies via `npm ci`.
 3. Compile the Next.js static build via `npm run build` (exporting page assets to `./out`).
 4. Upload and deploy the static build directly to your **github.io** site.
